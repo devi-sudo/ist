@@ -71,5 +71,10 @@ bot.launch();
 startBot();
 console.log('Assistance bot is runnng...');
 app.get('/', (req, res) => {
-    res.send('Assistance bot is ing...');
-})
+    res.send('Hello world');
+});
+// Listen on port for Vercel to handle web requests
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
